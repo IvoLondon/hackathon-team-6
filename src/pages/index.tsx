@@ -1,8 +1,10 @@
 import Chat from '../components/Chat'
 import { ChatData, ChatType } from '../components/Chat.types'
-
+import { ThemeProvider } from 'styled-components'
+import themeWS10 from '@vfuk/core-theme-ws10'
 import { useEffect, useState } from 'react'
 import { v4 as uuid } from 'uuid'
+import styles from '../page.module.css'
 
 export default function Home() {
   const [chat, setChat] = useState(new Array<ChatData>())
@@ -46,15 +48,17 @@ export default function Home() {
     setSession(uuid())
   }
   return (
-    <>
-      <h1>Lex Test</h1>
-      <h2>
-        Session: {session}
-        <button onClick={handleDeleteClick}>Delete</button>
-      </h2>{' '}
-      <input onChange={e => setText(e.target.value)} value={text} />
-      <button onClick={handleAskClick}>Ask</button>
-      <Chat chat={chat} />
-    </>
+    <ThemeProvider theme={themeWS10}>
+      <main className={styles.main}>
+        <h1>Lex Test</h1>
+        <h2>
+          Session: {session}
+          <button onClick={handleDeleteClick}>Delete</button>
+        </h2>{' '}
+        <input onChange={e => setText(e.target.value)} value={text} />
+        <button onClick={handleAskClick}>Ask</button>
+        <Chat chat={chat} />
+      </main>
+    </ThemeProvider>
   )
 }
