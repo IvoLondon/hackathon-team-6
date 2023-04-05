@@ -14,14 +14,14 @@ const nextConfig = {
               process.cwd(),
               "node_modules/@vfuk/source-tobi-icons/dist/assets"
             ),
-            to: "./public/icons/SourceTobiIcons",
+            to: "../public/icons/SourceTobiIcons",
           },
           {
             from: path.resolve(
               process.cwd(),
               "node_modules/@vfuk/source-system-icons/dist/assets"
             ),
-            to: "./public/icons/SourceSystemIcons",
+            to: "../public/icons/SourceSystemIcons",
           },
         ],
       })
