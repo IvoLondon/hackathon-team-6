@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "@types/node": "18.15.11",
-    "@types/react": "18.0.33",
+    "@types/react": "^18.0.33",
     "@types/react-dom": "18.0.11",
+    "@types/styled-components": "^5.1.26",
     "@vfuk/core-simple-badge": "6.4.x",
     "@vfuk/core-styles": "^14.4.0",
     "@vfuk/core-theme-ws10": "^23.10.0",
