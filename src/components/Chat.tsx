@@ -1,21 +1,17 @@
 import { ChatProps, ChatType } from './Chat.types'
+import * as Styled from './styled'
 
 const Chat = ({ chat }: ChatProps) => {
   return (
-    <div>
-      {chat.map(chatData => (
-        <div
-          style={{
-            fontWeight:
-              chatData.chatType === ChatType.Request ? 'bold' : 'normal',
-            padding: '4px'
-          }}
-          key={chatData.id}
-        >
-          {chatData.text}
-        </div>
-      ))}
-    </div>
+    <Styled.ResponseContainer>
+      {chat.map(chatData => {
+        return (
+          <Styled.Response key={chatData.id} chatType={chatData.chatType}>
+            {chatData.text}
+          </Styled.Response>
+        )
+      })}
+    </Styled.ResponseContainer>
   )
 }
 
