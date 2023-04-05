@@ -1,34 +1,12 @@
 import Chat from "../components/Chat";
 import { ChatData, ChatType } from "../components/Chat.types";
-import { ThemeProvider } from "styled-components";
-import themeWS10 from "@vfuk/core-theme-ws10";
 import { useEffect, useState } from "react";
-import i18n from "i18next";
 import { v4 as uuid } from "uuid";
-import styles from "../page.module.css";
-import { english } from "@vfuk/core-language-packs";
-import Ws10Theme from "@vfuk/core-theme-ws10";
+import AppWrapper from "../components/AppWrapper";
 
-import { initReactI18next, I18nextProvider } from "react-i18next";
-import intervalPlural from "i18next-intervalplural-postprocessor";
+import styles from "../page.module.css";
 
 import SearchInput from "@vfuk/core-search-input";
-
-i18n
-  .use(initReactI18next)
-  .use(intervalPlural)
-  .init({
-    resources: {
-      en: {
-        translation: english,
-      },
-    },
-    fallbackLng: "en",
-    interpolation: { escapeValue: false },
-  });
-
-Ws10Theme.setBaseAssetLocation("icons/");
-Ws10Theme.setAssetLocations("icons", "/");
 
 export default function Home() {
   const [chat, setChat] = useState(new Array<ChatData>());
@@ -72,32 +50,30 @@ export default function Home() {
     setSession(uuid());
   };
   return (
-    <ThemeProvider theme={themeWS10}>
-      <I18nextProvider i18n={i18n}>
-        <main className={styles.main}>
-          <h1>Lex Test</h1>
-          <h2>
-            Session: {session}
-            <button onClick={handleDeleteClick}>Delete</button>
-          </h2>{" "}
-          <input onChange={(e) => setText(e.target.value)} value={text} />
-          <SearchInput
-            textInput={{
-              value: text,
-              onChange: (e) => setText(e.target.value),
-              id: "search-input",
-            }}
-            fieldWrapper={{
-              width: "default",
-              label: "Search",
-              showLabel: false,
-            }}
-            onClear={() => setText("")}
-          />
-          <button onClick={handleAskClick}>Ask</button>
-          <Chat chat={chat} />
-        </main>
-      </I18nextProvider>
-    </ThemeProvider>
+    <AppWrapper>
+      <main className={styles.main}>
+        <h1>Lex Test</h1>
+        <h2>
+          Session: {session}
+          <button onClick={handleDeleteClick}>Delete</button>
+        </h2>{" "}
+        <input onChange={(e) => setText(e.target.value)} value={text} />
+        <SearchInput
+          textInput={{
+            value: text,
+            onChange: (e) => setText(e.target.value),
+            id: "search-input",
+          }}
+          fieldWrapper={{
+            width: "default",
+            label: "Search",
+            showLabel: false,
+          }}
+          onClear={() => setText("")}
+        />
+        <button onClick={handleAskClick}>Ask</button>
+        <Chat chat={chat} />
+      </main>
+    </AppWrapper>
   );
 }
