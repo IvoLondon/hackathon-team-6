@@ -5,6 +5,7 @@ import i18n from "i18next";
 import { english } from "@vfuk/core-language-packs";
 import { initReactI18next, I18nextProvider } from "react-i18next";
 import intervalPlural from "i18next-intervalplural-postprocessor";
+import * as Styled from "./styled";
 
 i18n
   .use(initReactI18next)
@@ -25,7 +26,9 @@ Ws10Theme.setAssetLocations("icons", "/");
 const AppWrapper = (props: any) => {
   return (
     <ThemeProvider theme={Ws10Theme}>
-      <I18nextProvider i18n={i18n}>{props.children}</I18nextProvider>
+      <I18nextProvider i18n={i18n}>
+        <Styled.StyledWrapper>{props.children}</Styled.StyledWrapper>
+      </I18nextProvider>
     </ThemeProvider>
   );
 };
