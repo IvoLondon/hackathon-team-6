@@ -6,11 +6,12 @@ function modifyStyles() {
   const searchInput = document.querySelector(
     '[data-custom-name="SearchInputWithIcon"]'
   );
-  // select svg icon in searchInput
-  const svg = searchInput.querySelector(`[data-component-name="IconButton"]`);
-  // change svg icon
-  console.log("SVG: ", svg);
-  svg.innerHTML = "ask";
+  if (searchInput) {
+    // select svg icon in searchInput
+    const svg = searchInput.querySelector(`[data-component-name="IconButton"]`);
+    // change svg icon
+    if (svg) svg.innerHTML = "ask";
+  }
 }
 
 const CustomSearchInput = (props: any) => {
