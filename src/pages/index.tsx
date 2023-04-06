@@ -4,6 +4,7 @@ import { v4 as uuid } from "uuid";
 import Chat from "../components/Chat";
 import AppWrapper from "../components/AppWrapper";
 import SearchInput from "../components/SearchInput";
+import Heading from "@vfuk/core-heading";
 
 import styles from "../page.module.css";
 
@@ -52,7 +53,7 @@ export default function Home() {
   return (
     <AppWrapper>
       <main className={styles.main}>
-        <h1>T0-B1</h1>
+        <Heading level={3} text="T0-B1" />
         <Chat chat={chat} />
         <SearchInput
           handleAskClick={handleAskClick}

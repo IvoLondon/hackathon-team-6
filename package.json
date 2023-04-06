@@ -17,6 +17,7 @@
     "@types/uuid": "^9.0.1",
     "@vfuk/core-content-block": "11.10.x",
     "@vfuk/core-contentful-rich-text": "^14.7.2",
+    "@vfuk/core-heading": "14.5.x",
     "@vfuk/core-icon-snippet": "16.10.x",
     "@vfuk/core-language-packs": "^1.2.0",
     "@vfuk/core-search-input": "^21.9.0",

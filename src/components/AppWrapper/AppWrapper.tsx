@@ -20,8 +20,9 @@ i18n
     interpolation: { escapeValue: false },
   });
 
-Ws10Theme.setBaseAssetLocation("icons/");
-Ws10Theme.setAssetLocations("icons", "/");
+Ws10Theme.setBaseAssetLocation("/assets/");
+// Ws10Theme.setAssetLocations("icons", "/assets/icons");
+// Ws10Theme.setAssetLocations("fonts", "/fonts");
 
 const AppWrapper = (props: any) => {
   return (
