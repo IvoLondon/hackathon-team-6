@@ -7,6 +7,7 @@ import AppWrapper from "../components/AppWrapper";
 import styles from "../page.module.css";
 
 import SearchInput from "@vfuk/core-search-input";
+import ChatIcon from "@/components/ChatIcon/ChatIcon";
 
 export default function Home() {
   const [chat, setChat] = useState(new Array<ChatData>());
@@ -52,6 +53,7 @@ export default function Home() {
   return (
     <AppWrapper>
       <main className={styles.main}>
+        <ChatIcon></ChatIcon>
         <h1>Lex Test</h1>
         <h2>
           Session: {session}

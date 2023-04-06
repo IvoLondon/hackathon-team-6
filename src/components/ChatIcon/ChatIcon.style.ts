@@ -12,7 +12,7 @@ const listAnimation = keyframes`
 
 export const IconContainer = styled.div(() => css`
   scale: 0.25;
-  border: 6px solid #111;
+  // border: 6px solid #111;
   border-radius: 200px;
 `)
 
