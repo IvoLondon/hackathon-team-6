@@ -1,17 +1,17 @@
-import Chat from "../components/Chat";
 import { ChatData, ChatType } from "../components/Chat.types";
 import { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
+import Chat from "../components/Chat";
 import AppWrapper from "../components/AppWrapper";
+import SearchInput from "../components/SearchInput";
 
 import styles from "../page.module.css";
-
-import SearchInput from "@vfuk/core-search-input";
 
 export default function Home() {
   const [chat, setChat] = useState(new Array<ChatData>());
   const [session, setSession] = useState("");
   const [text, setText] = useState("");
+
   useEffect(() => {
     setSession(uuid());
   }, []);
@@ -52,27 +52,13 @@ export default function Home() {
   return (
     <AppWrapper>
       <main className={styles.main}>
-        <h1>Lex Test</h1>
-        <h2>
-          Session: {session}
-          <button onClick={handleDeleteClick}>Delete</button>
-        </h2>{" "}
-        <input onChange={(e) => setText(e.target.value)} value={text} />
-        <SearchInput
-          textInput={{
-            value: text,
-            onChange: (e) => setText(e.target.value),
-            id: "search-input",
-          }}
-          fieldWrapper={{
-            width: "default",
-            label: "Search",
-            showLabel: false,
-          }}
-          onClear={() => setText("")}
-        />
-        <button onClick={handleAskClick}>Ask</button>
+        <h1>T0-B1</h1>
         <Chat chat={chat} />
+        <SearchInput
+          handleAskClick={handleAskClick}
+          setText={setText}
+          text={text}
+        />
       </main>
     </AppWrapper>
   );

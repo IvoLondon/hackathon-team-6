@@ -1,22 +1,24 @@
-import { ChatProps, ChatType } from './Chat.types'
+import { ChatProps, ChatType } from "./Chat.types";
+import * as Styled from "./styled";
+import ContentfulRichTextCore from "@vfuk/core-contentful-rich-text";
+import { SimpleCard } from "@vfuk/core-simple-card";
 
 const Chat = ({ chat }: ChatProps) => {
   return (
-    <div>
-      {chat.map(chatData => (
-        <div
-          style={{
-            fontWeight:
-              chatData.chatType === ChatType.Request ? 'bold' : 'normal',
-            padding: '4px'
-          }}
-          key={chatData.id}
-        >
-          {chatData.text}
-        </div>
-      ))}
-    </div>
-  )
-}
+    <Styled.ResponseContainer>
+      {chat.map((chatData) => {
+        return chatData.chatType ? (
+          <Styled.User chatType={chatData.chatType}>
+            <SimpleCard key={chatData.id} heading={{ text: chatData.text }} />
+          </Styled.User>
+        ) : (
+          <Styled.Response chatType={chatData.chatType}>
+            <SimpleCard key={chatData.id} heading={{ text: chatData.text }} />
+          </Styled.Response>
+        );
+      })}
+    </Styled.ResponseContainer>
+  );
+};
 
-export default Chat
+export default Chat;
