@@ -10,11 +10,13 @@ export const ResponseContainer = styled.div(
     return css`
       display: flex;
       flex-direction: column;
+      width: 100%;
+      flex: 1;
     `
   }
 )
 
-export const Response = styled.div(
+export const User = styled.div(
   ({ theme, chatType }: StyledResponseProps): FlattenSimpleInterpolation => {
     return css`
       display: flex;
@@ -32,12 +34,15 @@ export const Response = styled.div(
     `
   }
 )
-export const User = styled.div(
+export const Response = styled.div(
   ({ theme, chatType }: StyledResponseProps): FlattenSimpleInterpolation => {
     return css`
       width: auto;
       max-width: 75%;
       align-self: start;
+      display: flex;
+      align-items: center;
+
       & > div > div > div {
         border-radius: 0 8px 8px 8px;
 
