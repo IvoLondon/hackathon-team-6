@@ -42,10 +42,18 @@ export const Response = styled.div(
       align-self: start;
       display: flex;
       align-items: center;
-
+      & > div {
+        margin-left: 0.5rem;
+      }
+      & > div > div {
+        padding: 1rem;
+      }
       & > div > div > div {
         border-radius: 0 8px 8px 8px;
 
+        & > div {
+          padding: 0;
+        }
         & [data-component-name='Heading'] {
           font-size: ${theme.typography.heading[1].fontTablet};
           font-weight: ${theme.typography.heading[3].fontWeight};
