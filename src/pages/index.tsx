@@ -1,37 +1,89 @@
 import Chat from '../components/Chat'
 import { ChatData, ChatType } from '../components/Chat.types'
-import { ThemeProvider } from 'styled-components'
-import themeWS10 from '@vfuk/core-theme-ws10'
 import { useEffect, useState } from 'react'
-import i18n from 'i18next'
 import { v4 as uuid } from 'uuid'
-import styles from '../page.module.css'
-import { english } from '@vfuk/core-language-packs'
+import AppWrapper from '../components/AppWrapper'
 
-import { initReactI18next, I18nextProvider } from 'react-i18next'
-import intervalPlural from 'i18next-intervalplural-postprocessor'
+import styles from '../page.module.css'
 
 import SearchInput from '@vfuk/core-search-input'
-
-i18n
-  .use(initReactI18next)
-  .use(intervalPlural)
-  .init({
-    resources: {
-      en: {
-        translation: english
-      }
-    },
-    fallbackLng: 'en',
-    interpolation: { escapeValue: false }
-  })
 
 export default function Home() {
   const [chat, setChat] = useState(new Array<ChatData>())
   const [session, setSession] = useState('')
   const [text, setText] = useState('')
+
+  function modifyStyles() {
+    const searchInput = document.querySelector(
+      '.SearchInputstyle__SearchInput-sc-hmi9vj-0.bTMSRo'
+    )
+    searchInput.style.backgroundColor = '#F5F5F5'
+    searchInput.style.border = '2px solid #F5F5F5'
+    searchInput.style.borderRadius = '10px'
+    searchInput.style.padding = '10px'
+    searchInput.style.width = '100%'
+
+    // const searchIcon = document.querySelector('.SearchTextInputstyle__SearchIcon-sc-6ru1tt-4.gGLjoE');
+    // const button = document.createElement('button');
+    // button.setAttribute('type', 'button');
+    // button.setAttribute('aria-label', 'Search');
+    // button.setAttribute('aria-disabled', 'false');
+    // button.setAttribute('class', 'Interactionstyle__Button-sc-e1xkgc-0 fDJxJS IconButtonstyle__IconButton-sc-lsr68l-0 esPbyB');
+    // button.setAttribute('id', 'search-input-trigger');
+    // button.setAttribute('data-component-name', 'IconButton');
+
+    const icon = document.createElement('span')
+    icon.setAttribute('aria-hidden', 'true')
+    icon.setAttribute('size', '3')
+    icon.setAttribute('data-component-name', 'Icon')
+    icon.setAttribute('class', 'Iconstyle__Icon-sc-1kjx3w9-0 cKShzW')
+
+    const errorBox = document.createElement('span')
+    errorBox.setAttribute(
+      'class',
+      'Iconstyle__ErrorPinkBox-sc-1kjx3w9-1 hrrbDl'
+    )
+
+    const searchIcon = document.querySelector(
+      '.SearchTextInputstyle__SearchIcon-sc-6ru1tt-4.gGLjoE'
+    )
+    const existingButton = searchIcon.querySelector(
+      '.Interactionstyle__Button-sc-e1xkgc-0'
+    )
+
+    if (existingButton) {
+      const newButton = document.createElement('button')
+      newButton.setAttribute('type', 'button')
+      newButton.setAttribute('aria-label', 'Search')
+      newButton.setAttribute('aria-disabled', 'false')
+      newButton.setAttribute('class', 'my-custom-button-class')
+      newButton.setAttribute('id', 'search-input-trigger')
+      newButton.setAttribute('data-component-name', 'IconButton')
+      newButton.innerText = 'Ask'
+
+      searchIcon.replaceChild(newButton, existingButton)
+    }
+
+    const askButton = document.querySelector('.test')
+    askButton.style.display = 'none'
+
+    // const label = document.querySelector('.FieldWrapperstyle__Label-sc-1exrao2-1.jjmcDL');
+    // label.style.color = 'white';
+    // label.style.fontSize = '16px';
+
+    // const input = document.querySelector('.TextInputstyle__TextInput-sc-bg77me-1.bhdPYZ');
+    // input.style.backgroundColor = 'transparent';
+    // input.style.border = 'none';
+    // input.style.color = 'white';
+    // input.style.fontSize = '16px';
+
+    // const animate = document.querySelector('.Animatestyle__Animate-sc-17pgmc7-0.cbaJbX');
+    // animate.style.backgroundColor = '#FF6B6B';
+  }
+
   useEffect(() => {
     setSession(uuid())
+    modifyStyles() // Call the modifyStyles function here
   }, [])
   const handleAskClick = async () => {
     const fetchLex = await fetch(`./api/lex?session=${session}&text=${text}`)
@@ -68,27 +120,25 @@ export default function Home() {
     setSession(uuid())
   }
   return (
-    <ThemeProvider theme={themeWS10}>
-      <I18nextProvider i18n={i18n}>
-        <main className={styles.main}>
-          <Chat chat={chat} />
-          <input onChange={e => setText(e.target.value)} value={text} />
-          <SearchInput
-            textInput={{
-              value: text,
-              onChange: e => setText(e.target.value),
-              id: 'search-input'
-            }}
-            fieldWrapper={{
-              width: 'default',
-              label: 'Search',
-              showLabel: false
-            }}
-            onClear={() => setText('')}
-          />
-          <button onClick={handleAskClick}>Ask</button>
-        </main>
-      </I18nextProvider>
-    </ThemeProvider>
+    <AppWrapper>
+      <main className={styles.main}>
+        <h1>T0-B1</h1>
+        <Chat chat={chat} />
+
+        <SearchInput
+          textInput={{
+            value: text,
+            onChange: e => setText(e.target.value),
+            id: 'search-input'
+          }}
+          fieldWrapper={{
+            width: 'full',
+            label: 'Search',
+            showLabel: false
+          }}
+          onClear={() => setText('')}
+        />
+      </main>
+    </AppWrapper>
   )
 }
