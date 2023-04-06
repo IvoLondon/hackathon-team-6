@@ -16,5 +16,5 @@ export enum ChatType {
 }
 
 export interface StyledResponseProps extends ThemeProps {
-  chatType: number
+  chatType?: number
 }

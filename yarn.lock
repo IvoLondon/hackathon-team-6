@@ -924,6 +924,18 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
+"@contentful/rich-text-react-renderer@~15.16.2":
+  version "15.16.3"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-15.16.3.tgz#f6536c517ae903351e265243f33d6f56deed4d1f"
+  integrity sha512-aFtgKn8Yt19qpsez9RdV65/khPhy7GnWXhjhiCMSDVY9vDwyPIPfoKkInt+vePAk7rxlleXds5s7ba6Sm5zKQg==
+  dependencies:
+    "@contentful/rich-text-types" "^16.0.3"
+
+"@contentful/rich-text-types@^16.0.3", "@contentful/rich-text-types@~16.0.2":
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.0.3.tgz#c590268483e07881fb01b6799e837337093e42bf"
+  integrity sha512-BsUtXj93jo5XUt0YeUwfCkMWRoZIzJDPUIY4vMy9SwGIO9olTsMoQKadjA2ktlmK+Gg6710WH3eFKZxj2q39Iw==
+
 "@emotion/is-prop-valid@^1.1.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-1.2.0.tgz#7f2d35c97891669f7e276eb71c83376a5dc44c83"
@@ -1303,6 +1315,63 @@
   resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-base-props/-/core-base-props-3.1.2.tgz#03bef5d6231ffe28c40efbd8a33455c89295e617"
   integrity sha1-A7711iMf/ijEDvvYozRVyJKV5hc=
 
+"@vfuk/core-block@9.5.x":
+  version "9.5.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-block/-/core-block-9.5.0.tgz#f480a3e3658176912e4afd1b50dec28130ea6efd"
+  integrity sha1-9ICj42WBdpEuSv0bUN7CgTDqbv0=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-themes" "4.4.x"
+
+"@vfuk/core-button@19.6.x":
+  version "19.6.1"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-button/-/core-button-19.6.1.tgz#78edbe9342489c2dff37158fa6bfce9f04e51dbd"
+  integrity sha1-eO2+k0JInC3/NxWPpr/OnwTlHb0=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-icon" "14.4.x"
+    "@vfuk/core-interaction" "15.5.x"
+    "@vfuk/core-loading-spinner" "15.4.x"
+    "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-themes" "4.4.x"
+
+"@vfuk/core-container@18.6.x":
+  version "18.6.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-container/-/core-container-18.6.0.tgz#7549c8860b88e6f63c18cd1d5200da4480d7fbe9"
+  integrity sha1-dUnIhguI5vY8GM0dUgDaRIDX++k=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-icon" "14.4.x"
+    "@vfuk/core-interaction" "15.5.x"
+    "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-overlay" "12.5.x"
+    "@vfuk/core-themes" "4.4.x"
+
+"@vfuk/core-content-block@11.10.x":
+  version "11.10.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-content-block/-/core-content-block-11.10.0.tgz#9458823b4c582afff6f48dcd33706f94cc965f05"
+  integrity sha1-lFiCO0xYKv/29I3NM3BvlMyWXwU=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-functional-content-block" "12.10.x"
+    "@vfuk/core-themes" "4.4.x"
+
+"@vfuk/core-contentful-rich-text@^14.7.2":
+  version "14.7.2"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-contentful-rich-text/-/core-contentful-rich-text-14.7.2.tgz#d868ae1ad198f4d5e910fb248d3c053b22141092"
+  integrity sha1-2GiuGtGY9NXpEPskjTwFOyIUEJI=
+  dependencies:
+    "@contentful/rich-text-react-renderer" "~15.16.2"
+    "@contentful/rich-text-types" "~16.0.2"
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-heading" "14.5.x"
+    "@vfuk/core-list-group" "15.6.x"
+    "@vfuk/core-list-item" "15.6.x"
+    "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-paragraph" "13.4.x"
+    "@vfuk/core-span" "13.4.x"
+
 "@vfuk/core-field-wrapper@19.7.x":
   version "19.7.0"
   resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-field-wrapper/-/core-field-wrapper-19.7.0.tgz#b36b29ba95686a78b596d0df393f62f46d8a0c77"
@@ -1315,6 +1384,47 @@
     "@vfuk/core-link" "17.6.x"
     "@vfuk/core-list-group" "15.6.x"
     "@vfuk/core-list-item" "15.6.x"
+    "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-themes" "4.4.x"
+
+"@vfuk/core-functional-card-panel@18.0.x":
+  version "18.0.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-functional-card-panel/-/core-functional-card-panel-18.0.0.tgz#827a2c71fb53e291868580943ea9b2fa718956f5"
+  integrity sha1-gnoscftT4pGGhYCUPqmy+nGJVvU=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-button" "19.6.x"
+    "@vfuk/core-heading" "14.5.x"
+    "@vfuk/core-icon" "14.4.x"
+    "@vfuk/core-interaction" "15.5.x"
+    "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-paragraph" "13.4.x"
+    "@vfuk/core-pill" "15.4.x"
+    "@vfuk/core-themes" "4.4.x"
+
+"@vfuk/core-functional-content-block@12.10.x":
+  version "12.10.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-functional-content-block/-/core-functional-content-block-12.10.0.tgz#78b80bdc20822d0e45e818584df781933aed6539"
+  integrity sha1-eLgL3CCCLQ5F6BhYTfeBkzrtZTk=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-block" "9.5.x"
+    "@vfuk/core-button" "19.6.x"
+    "@vfuk/core-heading" "14.5.x"
+    "@vfuk/core-icon" "14.4.x"
+    "@vfuk/core-image" "12.7.x"
+    "@vfuk/core-match-media" "13.5.x"
+    "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-paragraph" "13.4.x"
+    "@vfuk/core-themes" "4.4.x"
+    "@vfuk/core-youtube-video" "12.5.x"
+
+"@vfuk/core-heading@14.5.x":
+  version "14.5.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-heading/-/core-heading-14.5.0.tgz#497107640fccb7ab69680c6b5993e4c0f0d2fdf5"
+  integrity sha1-SXEHZA/Mt6tpaAxrWZPkwPDS/fU=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
     "@vfuk/core-mixins" "5.4.x"
     "@vfuk/core-themes" "4.4.x"
 
@@ -1345,6 +1455,17 @@
   resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-icon-generator/-/core-icon-generator-3.1.1.tgz#065df91a6f13c32f7c0a8c10ff872a124c215a94"
   integrity sha1-Bl35Gm8Twy98CowQ/4cqEkwhWpQ=
 
+"@vfuk/core-icon-snippet@16.10.x":
+  version "16.10.1"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-icon-snippet/-/core-icon-snippet-16.10.1.tgz#0d10d39e82ed5f26284ec595c918001eeffba85a"
+  integrity sha1-DRDTnoLtXyYoTsWVyRgAHu/7qFo=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-icon" "14.4.x"
+    "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-snippet" "16.9.x"
+    "@vfuk/core-themes" "4.4.x"
+
 "@vfuk/core-icon@14.4.x":
   version "14.4.0"
   resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-icon/-/core-icon-14.4.0.tgz#a3624247351a52001b41b60dae0bac3943c089a4"
@@ -1354,6 +1475,24 @@
     "@vfuk/core-icon-generator" "3.1.x"
     "@vfuk/core-mixins" "5.4.x"
     "@vfuk/core-number-badge" "10.4.x"
+    "@vfuk/core-themes" "4.4.x"
+
+"@vfuk/core-iframe-wrapper@10.5.x":
+  version "10.5.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-iframe-wrapper/-/core-iframe-wrapper-10.5.0.tgz#314b69ab60fbb48e615ad5436aa3c05ca58afadb"
+  integrity sha1-MUtpq2D7tI5hWtVDaqPAXKWK+ts=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-match-media" "13.5.x"
+    iframe-resizer-react "^1.1.x"
+
+"@vfuk/core-image@12.7.x":
+  version "12.7.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-image/-/core-image-12.7.0.tgz#ac8f5e9bd1f80eabd467f33942333827f20cf855"
+  integrity sha1-rI9em9H4DqvUZ/M5QjM4J/IM+FU=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-match-media" "13.5.x"
     "@vfuk/core-themes" "4.4.x"
 
 "@vfuk/core-interaction@15.5.x":
@@ -1444,6 +1583,32 @@
     "@vfuk/core-mixins" "5.4.x"
     "@vfuk/core-themes" "4.4.x"
 
+"@vfuk/core-overlay@12.5.x":
+  version "12.5.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-overlay/-/core-overlay-12.5.0.tgz#940198a673a2493e48351e80cd9ea5d51dd248ea"
+  integrity sha1-lAGYpnOiST5INR6AzZ6l1R3SSOo=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-themes" "4.4.x"
+
+"@vfuk/core-paragraph@13.4.x":
+  version "13.4.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-paragraph/-/core-paragraph-13.4.0.tgz#0bb070afde7ddc317982b6795ade8af0128463fa"
+  integrity sha1-C7Bwr9593DF5grZ5Wt6K8BKEY/o=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-themes" "4.4.x"
+
+"@vfuk/core-pill@15.4.x":
+  version "15.4.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-pill/-/core-pill-15.4.0.tgz#1e9476e9af932736112801406d7cd3a12f759bab"
+  integrity sha1-HpR26a+TJzYRKAFAbXzToS91m6s=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-themes" "4.4.x"
+
 "@vfuk/core-search-input@^21.9.0":
   version "21.9.0"
   resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-search-input/-/core-search-input-21.9.0.tgz#b50637c6f2787235389ff346b54664046a477113"
@@ -1465,6 +1630,39 @@
   dependencies:
     "@vfuk/core-base-props" "3.1.x"
     "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-themes" "4.4.x"
+
+"@vfuk/core-simple-card@18.0.x":
+  version "18.0.1"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-simple-card/-/core-simple-card-18.0.1.tgz#3c76607d452c8e5b86970b369863dc8501114330"
+  integrity sha1-PHZgfUUsjluGlws2mGPchQERQzA=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-container" "18.6.x"
+    "@vfuk/core-functional-card-panel" "18.0.x"
+    "@vfuk/core-icon" "14.4.x"
+    "@vfuk/core-pill" "15.4.x"
+
+"@vfuk/core-snippet@16.9.x":
+  version "16.9.1"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-snippet/-/core-snippet-16.9.1.tgz#f4d9fbe4b75083ed9028935b0e03cc1879d030e9"
+  integrity sha1-9Nn75LdQg+2QKJNbDgPMGHnQMOk=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-button" "19.6.x"
+    "@vfuk/core-heading" "14.5.x"
+    "@vfuk/core-link" "17.6.x"
+    "@vfuk/core-mixins" "5.4.x"
+    "@vfuk/core-paragraph" "13.4.x"
+    "@vfuk/core-themes" "4.4.x"
+    lodash "^4.17.21"
+
+"@vfuk/core-span@13.4.x":
+  version "13.4.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-span/-/core-span-13.4.0.tgz#fff8e8e67c418f579f8de738d37ed84d30983fda"
+  integrity sha1-//jo5nxBj1efjec4037YTTCYP9o=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
     "@vfuk/core-themes" "4.4.x"
 
 "@vfuk/core-styles@14.4.x", "@vfuk/core-styles@^14.4.0":
@@ -1514,6 +1712,14 @@
   dependencies:
     "@vfuk/core-icon-generator" "3.1.x"
     react-svg "~14.0.7"
+
+"@vfuk/core-youtube-video@12.5.x":
+  version "12.5.0"
+  resolved "https://vfuk-digital.pkgs.visualstudio.com/_packaging/Web/npm/registry/@vfuk/core-youtube-video/-/core-youtube-video-12.5.0.tgz#a49f6c35e61be3f56f14242b06dd520654d73c28"
+  integrity sha1-pJ9sNeYb4/VvFCQrBt1SBlTXPCg=
+  dependencies:
+    "@vfuk/core-base-props" "3.1.x"
+    "@vfuk/core-iframe-wrapper" "10.5.x"
 
 "@vfuk/source-flag-icons@7.5.x":
   version "7.5.0"
@@ -2608,6 +2814,19 @@ i18next@^22.4.14:
   dependencies:
     "@babel/runtime" "^7.20.6"
 
+iframe-resizer-react@^1.1.x:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/iframe-resizer-react/-/iframe-resizer-react-1.1.0.tgz#5009e019b7a5c7f1c009bff5bcdf0dbf33557465"
+  integrity sha512-FrytSq91AIJaDgE+6uK/Vdd6IR8CrwLoZ6eGmL2qQMPTzF0xlSV2jaSzRRUh5V2fttD7vzl21jvBl97bV40eBw==
+  dependencies:
+    iframe-resizer "^4.3.0"
+    warning "^4.0.3"
+
+iframe-resizer@^4.3.0:
+  version "4.3.6"
+  resolved "https://registry.yarnpkg.com/iframe-resizer/-/iframe-resizer-4.3.6.tgz#61d92c1adefe5d416bff4fbf80c7f1f74be70ec0"
+  integrity sha512-wz0WodRIF6eP0oGQa5NIP1yrITAZ59ZJvVaVJqJRjaeCtfm461vy2C3us6CKx0e7pooqpIGLpVMSTzrfAjX9Sg==
+
 ignore@^5.2.0:
   version "5.2.4"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.4.tgz#a291c0c6178ff1b960befe47fcdec301674a6324"
@@ -2909,7 +3128,7 @@ lodash@^4.17.11, lodash@^4.17.21:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
-loose-envify@^1.1.0, loose-envify@^1.4.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -3590,6 +3809,13 @@ void-elements@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-3.1.0.tgz#614f7fbf8d801f0bb5f0661f5b2f5785750e4f09"
   integrity sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w==
+
+warning@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
+  integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
+  dependencies:
+    loose-envify "^1.0.0"
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
