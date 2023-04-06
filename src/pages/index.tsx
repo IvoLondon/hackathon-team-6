@@ -1,7 +1,7 @@
-import Chat from "../components/Chat";
 import { ChatData, ChatType } from "../components/Chat.types";
 import { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
+import Chat from "../components/Chat";
 import AppWrapper from "../components/AppWrapper";
 import SearchInput from "../components/SearchInput";
 
@@ -52,17 +52,13 @@ export default function Home() {
   return (
     <AppWrapper>
       <main className={styles.main}>
-        <h1>Lex Test</h1>
-        <h2>
-          Session: {session}
-          <button onClick={handleDeleteClick}>Delete</button>
-        </h2>{" "}
+        <h1>T0-B1</h1>
+        <Chat chat={chat} />
         <SearchInput
           handleAskClick={handleAskClick}
           setText={setText}
           text={text}
         />
-        <Chat chat={chat} />
       </main>
     </AppWrapper>
   );
