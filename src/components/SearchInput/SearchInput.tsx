@@ -1,7 +1,22 @@
 import React, { useEffect } from "react";
 import SearchInput from "@vfuk/core-search-input";
 
+function modifyStyles() {
+  // select a dom element by data attribute
+  const searchInput = document.querySelector(
+    '[data-custom-name="SearchInputWithIcon"]'
+  );
+  // select svg icon in searchInput
+  const svg = searchInput.querySelector(`[data-component-name="IconButton"]`);
+  // change svg icon
+  console.log("SVG: ", svg);
+  svg.innerHTML = "ask";
+}
+
 const CustomSearchInput = (props: any) => {
+  useEffect(() => {
+    modifyStyles();
+  }, []);
   return (
     <SearchInput
       textInput={{
@@ -15,6 +30,7 @@ const CustomSearchInput = (props: any) => {
         showLabel: false,
       }}
       onClear={() => props.setText("")}
+      dataAttributes={{ "data-custom-name": "SearchInputWithIcon" }}
       searchIconButton={{ onClick: props.handleAskClick }}
     />
   );
