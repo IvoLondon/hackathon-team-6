@@ -27,7 +27,7 @@ export const User = styled.div(
         border-radius: 8px 0 8px 8px;
 
         & [data-component-name='Heading'] {
-          font-size: ${theme.typography.heading[1].fontTablet};
+          font-size: ${theme.typography.paragraph[2].fontMobile};
           font-weight: ${theme.typography.heading[3].fontWeight};
         }
       }
@@ -38,7 +38,7 @@ export const Response = styled.div(
   ({ theme, chatType }: StyledResponseProps): FlattenSimpleInterpolation => {
     return css`
       width: auto;
-      max-width: 75%;
+
       align-self: start;
       display: flex;
       align-items: center;
@@ -55,8 +55,8 @@ export const Response = styled.div(
           padding: 0;
         }
         & [data-component-name='Heading'] {
-          font-size: ${theme.typography.heading[1].fontTablet};
-          font-weight: ${theme.typography.heading[3].fontWeight};
+          font-size: ${theme.typography.paragraph[1].fontMobile};
+          font-weight: ${theme.typography.heading[5].fontWeight};
         }
       }
     `
