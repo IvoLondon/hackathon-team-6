@@ -6,3 +6,9 @@
   padding: 6rem;
   min-height: 100vh;
 }
+
+
+ .wrapper {
+  width: 100% !important;
+  background-color: red !important;
+}
